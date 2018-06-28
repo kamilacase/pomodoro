@@ -1,0 +1,27 @@
+.row {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+}
+
+.encours {
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.border {
+    border: solid 5px black;
+    padding: 3%;
+}
+
+.bigbtnt {
+    margin: 10% 0 2% 0;
+    padding: 5%;
+    width: 50%;
+}
