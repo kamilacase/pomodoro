@@ -3,9 +3,10 @@
 // })
 $(document).ready(function () {
     $('#addTask').on("click", function () {
-        $('div#tasklist').append(
-            "<div>" + $("#drag").val() + " <a class='delete'><i class='fas fa-user-check'></i></a></div>")
+        $('div#container').append(
+            "<div class='zobi'>" + $("#drag").val() + " <a class='delete'><i class='fas fa-user-check'></i></a></>")
         })
 
     })
-dragula([document.getElementById(tasklist)])
+dragula([document.getElementById("container")])
+
