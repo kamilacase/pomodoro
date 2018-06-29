@@ -13,20 +13,77 @@ input {
 footer {
     display: flex;
     justify-content: center;
+    color: white;
+    font-size: 20px;
 }
 
 .border {
-    border: solid 5px black;
+    border: solid 10px white;
     padding: 3%;
 }
 
 .bigbtnt {
-    margin: 10% 0 2% 0;
-    padding: 5%;
-    width: 50%;
+    margin: 0% 0 2% 0;
+    padding: 1%;
+    width: 80%;
 }
 
 .zobi {
     padding: 2%;
-    background-color: blue;
+    background-color: white;
+}
+
+h1 {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+
+#head {
+    color: white;
+    text-align: center;
+}
+
+#drag {
+    width: 100%;
+}
+
+#pomodoro-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent url(b.png) repeat;
+    z-index: 99;
+}
+
+#pomodoro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+#pomodoro .content {
+    background-color: #FFF;
+    border: 5px solid #555;
+    padding: 25px 50px;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+}
+
+#pomodoro .content .timer {
+    display: block;
+    font: normal small-caps bold 5em Arial, sans-serif;
+}
+
+#pomodoro .content ul.actions {
+    text-align: right;
+    list-style-type: none;
+    padding: 5px 0;
+}
+
+#pomodoro .content ul.actions li {
+    display: inline;
 }
