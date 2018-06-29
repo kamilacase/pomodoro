@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="node_modules/dragula/dist/dragula.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="node_modules/pomodoro-clock/dist/assets/css/main.css">
-    <link rel="stylesheet" href="/path/tofont-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Skylined</title>
 </head>
@@ -51,30 +50,70 @@
 
 
                 <div class="col-lg-4 border">
-                    <div id="circleClock" class="circle-clock">
+                    <div class="container-fluid text-center">
+                      <div class="center-row">
+                        <div class="">
+                          <p id="timer-text" class="text-up pad-all"></p>
+                          <p id="timer" class="text-up size-change">25:00</p>
+                          <button type="button" class="btn btn-lg text-up s-button m-button" data-toggle="modal" data-target="#myModal">settings</button>
+                <button id="start" class="text-up s-button btn btn-secondary btn-lg" type="button" name="button">start</button>
+                    </div>
+                  </div>
 
-                        <div id="clockTime" class="clock-time">
-                            <h3>
-                                <span id="minutes">25</span>:
-                                <span id="seconds">00</span>
-                            </h3>
+                  <!-- Modal -->
+                    <div id="myModal" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+                        <!-- Modal Core -->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h3 class="center-row">Settings</h3>
+                          </div>
+                          <div class="modal-body">
+                            <div class="session-b">
+                              <button type="button" class="btn btn-default dropdown-toggle drop-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Session Time
+                      <span class="caret"></span>
+                    </button>
+                              <ul class="dropdown-menu">
+                                <li class="5-min"><a href="#">5</a></li>
+                                <li class="10-min"><a href="#">10</a></li>
+                                <li class="15-min"><a href="#">15</a></li>
+                                <li class="20-min"><a href="#">20</a></li>
+                                <li class="25-min"><a href="#">25</a></li>
+                                <li class="30-min"><a href="#">30</a></li>
+                                <li class="35-min"><a href="#">35</a></li>
+                                <li class="40-min"><a href="#">40</a></li>
+                                <li class="45-min"><a href="#">45</a></li>
+                              </ul>
+                              <p class="ses-time"></p><p> Minutes</p>
+                            </div>
+                            <div class="break-t">
+                              <button type="button" class="btn btn-default dropdown-toggle drop-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Break Time
+                      <span class="caret"></span>
+                    </button>
+                              <ul class="dropdown-menu">
+                                <li class="1-min-b"><a href="#">1</a></li>
+                                <li class="2-min-b"><a href="#">2</a></li>
+                                <li class="3-min-b"><a href="#">3</a></li>
+                                <li class="5-min-b"><a href="#">5</a></li>
+                                <li class="10-min-b"><a href="#">10</a></li>
+                                <li class="15-min-b"><a href="#">15</a></li>
+                                <li class="20-min-b"><a href="#">20</a></li>
+                                <li class="25-min-b"><a href="#">25</a></li>
+                                <li class="30-min-b"><a href="#">30</a></li>
+                              </ul>
+                              <p class="br-time"></p><p> Minutes</p>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
                         </div>
-                        <div id="clockStatus" class="status">Click to start!</div>
+                      </div>
                     </div>
-                </div>
-                <div class="setters">
-                    <div class="break-setter">
-                        <p class="breakText">Break time</p>
-                        <button id="breakPlus">+</button>
-                        <span id="breakTime" class="break-time">5 min</span>
-                        <button id="breakMinus">-</button>
-                    </div>
-                    <div class="work-setter">
-                        <p class="workText">Work time</p>
-                        <button id="workPlus">+</button>
-                        <span id="workTime" class="work-time">25 min</span>
-                        <button id="workMinus">-</button>
-                    </div>
+
                 </div>
 
                 <div class="col-lg-4 border">
